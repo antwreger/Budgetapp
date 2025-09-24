@@ -1,0 +1,257 @@
+Steg-för-steg guide: HTML & CSS Expense Tracker
+Fas 1: Förberedelser
+Steg 1: Sätt upp arbetsmiljö
+
+Öppna din kod-editor (VS Code rekommenderas)
+Skapa en ny mapp på skrivbordet som heter "expense-tracker"
+Skapa en fil som heter "index.html" i mappen
+Skapa en fil som heter "style.css" i samma mapp
+
+Steg 2: Grundläggande HTML-struktur
+
+Skriv HTML5 doctype längst upp i filen
+Skapa html-element med svensk språkinställning
+Lägg till head-sektion med charset, viewport och title
+Länka till din CSS-fil från head-sektionen
+Skapa body-elementet
+
+Fas 2: HTML-innehåll
+Steg 3: Skapa huvudcontainer
+
+Inuti body, skapa en div med class "container"
+Detta blir wrapper för hela din app
+
+Steg 4: Bygg header-sektionen
+
+Inuti container, skapa en div med class "header"
+Lägg till en h1 med texten "Expense Tracker"
+Lägg till en paragraf med beskrivande text under
+
+Steg 5: Skapa sammanfattnings-sektion
+
+Efter header, skapa en div med class "summary"
+Inuti summary, skapa tre div-element med class "summary-card"
+I varje kort:
+
+Lägg till en h3 med titel (Inkomster, Utgifter, Saldo)
+Lägg till en div med class "amount" och placeholder-belopp
+Ge korten olika klasser för färgkodning
+
+
+
+Steg 6: Skapa huvudlayout-container
+
+Efter summary, skapa en div med class "layout"
+Denna kommer innehålla sidebar och main content
+
+Steg 7: Bygg sidebar med formulär
+
+Inuti layout, skapa en div med class "sidebar"
+Lägg till en h2 med text "Ny transaktion"
+Skapa ett form-element
+I formuläret, skapa div-element med class "form-group" för varje fält:
+
+Beskrivning (text input)
+Belopp (number input)
+Kategori (select dropdown)
+Typ (select med utgift/inkomst)
+Datum (date input)
+
+
+Lägg till labels för varje input
+Avsluta med en submit-knapp
+
+Steg 8: Skapa huvudinnehållsområde
+
+Efter sidebar, inuti layout, skapa div med class "main-content"
+Skapa en div med class "tabs" för tab-navigation
+Lägg till två button-element för "Transaktioner" och "Kategorier"
+Skapa två div-element med class "tab-content" för innehållet
+
+Steg 9: Bygg transaktionslistan
+
+I första tab-content:
+
+Lägg till header med "Senaste transaktioner"
+Skapa div med class "transactions"
+Lägg till flera div-element med class "transaction-item"
+Varje transaktion ska ha:
+
+Div för info (beskrivning och kategori)
+Div för belopp
+Div för datum
+
+
+
+
+
+Fas 3: Grundläggande CSS
+Steg 10: CSS Reset och bas-inställningar
+
+Börja CSS-filen med universal selector (*) för reset
+Sätt margin och padding till 0
+Sätt box-sizing till border-box
+Definiera font-family på body (Inter eller system fonts)
+Sätt bakgrundsfärg och grundläggande textfärg
+
+Steg 11: Container och layout
+
+Styla .container med max-width och centrering
+Lägg till padding runt container
+Sätt upp grundläggande spacing
+
+Steg 12: Header-styling
+
+Styla .header med text-align center
+Sätt font-size och font-weight för h1
+Styla beskrivnings-paragrafen med mindre, grå text
+Lägg till margin-bottom för spacing
+
+Steg 13: Sammanfattningskort
+
+Styla .summary med CSS Grid (3 kolumner)
+Lägg till gap mellan korten
+Styla .summary-card med:
+
+Vit bakgrund
+Border och border-radius
+Padding
+Text-align center
+
+
+Styla .amount med större font-size och font-weight
+Lägg till färger för olika kort-typer (grön för inkomst, röd för utgift)
+
+Steg 14: Huvudlayout med Grid
+
+Styla .layout med CSS Grid (2 kolumner: 320px och 1fr)
+Sätt gap mellan kolumnerna
+Lägg till margin-top efter sammanfattningen
+
+Steg 15: Sidebar-styling
+
+Styla .sidebar med:
+
+Vit bakgrund
+Border och border-radius
+Padding
+height: fit-content så den inte sträcker sig
+
+
+
+Steg 16: Formulär-styling
+
+Styla .form-group med margin-bottom
+Styla labels med:
+
+display: block
+Margin-bottom
+Font-weight och färg
+
+
+Styla inputs och selects med:
+
+width: 100%
+Padding
+Border och border-radius
+Font-size
+
+
+Lägg till focus-states för inputs
+Styla submit-knappen med blå bakgrund och vit text
+
+Fas 4: Huvudinnehåll och komponenter
+Steg 17: Main content styling
+
+Styla .main-content med vit bakgrund, border och border-radius
+Se till att den fyller tillgänglig höjd
+
+Steg 18: Tab-navigation
+
+Styla .tabs med flexbox
+Lägg till border-bottom
+Styla .tab med:
+
+Padding
+Border-bottom för active state
+Cursor pointer
+Färgskillnad för active/inactive
+
+
+
+Steg 19: Transaktionslista
+
+Styla .transactions med max-height och overflow-y scroll
+Styla .transaction-item med:
+
+Flexbox layout (justify-content: space-between)
+Padding
+Border-bottom mellan items
+
+
+Styla transaktions-info, belopp och datum separat
+
+Steg 20: Färgkodning
+
+Lägg till klasser för .income och .expense
+Definiera gröna och röda färger
+Applicera på belopp beroende på typ
+
+Fas 5: Responsiv design
+Steg 21: Mobile-first approach
+
+Lägg till media query för max-width 768px
+Ändra .layout till single column (grid-template-columns: 1fr)
+Minska gap mellan element
+Justera padding och font-sizes för mindre skärmar
+
+Steg 22: Mobilanpassning av komponenter
+
+Styla .summary för mobil (kanske single column eller mindre gap)
+Anpassa .transaction-item för mobil:
+
+Ändra till flex-direction: column
+Justera alignment och spacing
+
+
+Se till att formulär-element är lätta att använda på touch
+
+Steg 23: Finputsning
+
+Testa på olika skärmstorlekar
+Justera spacing och proportioner
+Se till att allt är läsbart och klickbart
+Lägg till subtila hover-effekter där det passar
+
+Fas 6: Testning och validering
+Steg 24: Browser-testning
+
+Öppna index.html i olika webbläsare
+Testa responsiviteten genom att ändra fönsterstorlek
+Kontrollera att alla element ser rätt ut
+
+Steg 25: Validering och optimering
+
+Validera HTML och CSS med online-verktyg
+Kontrollera att accessibility-riktlinjer följs (kontrast, alt-texter)
+Optimera för laddningstider (om du senare lägger till bilder)
+
+Pro-tips under arbetets gång:
+Arbeta systematiskt
+
+Gör klart en sektion helt innan du går vidare
+Testa utseendet efter varje större ändring
+Använd webbläsarens utvecklarverktyg för att inspektera element
+
+Använd rätt enheter
+
+px för borders och små fasta mått
+rem/em för font-sizes och spacing
+% eller fr för layouter
+vh/vw för fullskärms-element
+
+Organisera din CSS
+
+Gruppera relaterade stilar tillsammans
+Kommentera olika sektioner
+Använd konsekvent namngivning för klasser
